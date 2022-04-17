@@ -13,6 +13,6 @@ func main() {
 		return
 	}
 	fmt.Printf("Количество единиц: %d\n", num%10)
-	fmt.Printf("Количество десятков: %d\n", int(num/10)%10)
-	fmt.Printf("Количество сотен: %d\n", int(num/100))
+	fmt.Printf("Количество десятков: %d\n", (num/10)%10)
+	fmt.Printf("Количество сотен: %d\n", num/100)
 }
