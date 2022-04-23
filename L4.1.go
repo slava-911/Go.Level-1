@@ -23,18 +23,21 @@ func main() {
 
 	fmt.Println("Веденный набор чисел:")
 	fmt.Println(numbers)
-	sortInsert(numbers)
+	insertionSort(numbers)
 	fmt.Println("После сортировки:")
 	for _, num := range numbers {
 		fmt.Print(num, " ")
 	}
 }
 
-func sortInsert(arr []int64) {
+func insertionSort(arr []int64) {
 	n := len(arr)
-	for i := 1; i < n; i++ {
-		for j := i; j > 0 && arr[j-1] > arr[j]; j-- {
-			arr[j-1], arr[j] = arr[j], arr[j-1]
+	var i, j int
+	for i = 1; i < n; i++ {
+		temp := arr[i]
+		for j = i; j > 0 && arr[j-1] > temp; j-- {
+			arr[j] = arr[j-1]
 		}
+		arr[j] = temp
 	}
 }
