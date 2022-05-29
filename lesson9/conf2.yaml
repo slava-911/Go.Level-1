@@ -1,0 +1,8 @@
+adress1_url: http://jaeger:16686
+adress2_url: http://sentry:9000
+debug: false
+port: 8080
+user: Kelsey
+rate: 0.5
+timeout: "3m"
+users: [ "rob","ken","robert" ]
